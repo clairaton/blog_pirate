@@ -1,4 +1,5 @@
 @import "reset.css";
+@import "font.css";
 
 /* idées polices
 ** http://www.dafont.com/fr/scurlock.font
@@ -10,9 +11,22 @@
 **
 */
 
+
+/*   ------------------------------   Site général   ------------------------------   */
+
+
 body{
-	background: #f3f3f1;
+	background-color: #F3F3F1;
+	background: url(../img/fond_pirate.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+	background-attachment: fixed;
 	text-align: center;
+	font-family: "MariageCilou";
+	font-size: 10px;
+	z-index:1;
 }
 
 .container{
@@ -20,8 +34,8 @@ body{
 	margin:auto;
 }
 
-
-/*   ------------------------------   Site général   ------------------------------   */
+.btn-back{
+}
 
 /************************************************************************
 *																		*
@@ -29,13 +43,16 @@ body{
 *																		*
 ************************************************************************/
 
-#header .container{
+#header{
+}
 
+#header .container{
 }
 
 /*    ----------         Menu 		---------      */
 
-
+#main-nav{
+}
 
 
 
@@ -46,8 +63,42 @@ body{
 *																		*
 ************************************************************************/
 
+#main{
+}
 
+#main .container{
+}
 
+/*    ----------         Menu 		---------      */
+
+#main-sidebar{
+}
+
+.sidebar{
+}
+
+/*    ----------         Loop		---------      */
+
+.post{
+}
+
+.title{
+}
+
+.thumb-home{
+}
+
+.resume{
+}
+
+.date{
+}
+
+.author{
+}
+
+.content{
+}
 
 
 
@@ -59,5 +110,9 @@ body{
 ************************************************************************/
 
 
+#footer{
+}
 
+#footer .container{
+}
 
