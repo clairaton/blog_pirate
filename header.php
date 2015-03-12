@@ -1,8 +1,7 @@
 <?php
 // On récupère la page en cours, $_SERVER['PHP_SELF'] renvoie le chemin en entier, basename permet de garder seulement le nom du fichier
 $current_page = basename($_SERVER['PHP_SELF']);
-
-
+include_once('inc/db.php');
 
 ?>
 <!DOCTYPE html>

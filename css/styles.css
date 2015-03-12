@@ -7,6 +7,7 @@
 */
 
 /* idées palettes couleurs
+* yellow #e3ca76; black : #000500; parchemin : #c8b17f; brown: #58220a; white: #ffffff;
 ** http://colrd.com/palette/18108/
 **
 */
@@ -16,25 +17,31 @@
 
 
 body{
-	background-color: #F3F3F1;
-	background: url(../img/fond_pirate.jpg);
+	background-color: #f3f3f1;
+	background: url(../img/Pirate-Bay-vuelve-aunque-con-algunos-huecos-por-tapar-b.jpeg);
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: center;
+    background-position: bottom;
     background-size: cover;
 	background-attachment: fixed;
 	text-align: center;
 	font-family: "MariageCilou";
-	font-size: 10px;
-	z-index:1;
+	font-size: 20px;
 }
 
 .container{
 	width: 1200px;
 	margin:auto;
+	height: 100%;
 }
 
 .btn-back{
+}
+
+a{
+	text-decoration: none;
+	color:#000500;
+	transition: all, 1s;
 }
 
 /************************************************************************
@@ -44,15 +51,33 @@ body{
 ************************************************************************/
 
 #header{
+	margin: auto;
+	width: 1200px;
+	height: 120px;
+	padding-bottom: 5px;
+	border-bottom: 2px solid ;
 }
 
 #header .container{
+	border-bottom:3px solid #913e2a;
+	margin-bottom:3px;
 }
 
 /*    ----------         Menu 		---------      */
 
 #main-nav{
 }
+
+#main-nav a{
+	float:left;
+	margin-top: 60px;
+	font-size:2.75em;
+	font-family:"surcouf";
+	padding:3px 3px 3px 50px;
+	background: url(../img/fish_icone.png) no-repeat;
+	background-position: 5px 12px;
+}
+
 
 
 

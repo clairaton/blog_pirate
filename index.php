@@ -5,7 +5,7 @@ include 'header.php';
 $stmt = $db -> query('SELECT * FROM post');
 $posts = $stmt -> fetchAll();
 
-foreach($post as $posts){ ?>
+foreach($posts as $post){ ?>
 	<section class="post">
 		<h1 class="title"><?= $post['post_title']?></h1>
 		<img class="thumb-home" src="" alt="" title="">
