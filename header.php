@@ -21,6 +21,7 @@ require_once('inc/config.php');
 	<body>
 		<header id="header">
 			<div class="container">
+			<h1>Les Pirates du XXeme</h1>
 			<?php include 'nav.php'; ?>
 			</div>
 		</header>

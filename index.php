@@ -8,8 +8,12 @@ include 'header.php';
 $stmt = $db -> query('SELECT * FROM post');
 $posts = $stmt -> fetchAll();
 
+?>
+	<aside class="hidden-xs col-md-5">		
+	</aside>
+<?php
 foreach($posts as $post){ ?>
-	<section class="post col-xs-12 col-md-6 col-lg-4">
+	<section class="post col-xs-12 col-md-6">
 		<h1 class="title"><?= $post['post_title']?></h1>
 		<img class="thumb-home" src="" alt="" title="">
 		<div class="resume">

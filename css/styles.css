@@ -18,10 +18,10 @@
 
 body{
 	background-color: #f3f3f1;
-	background: url(../img/Pirate-Bay-vuelve-aunque-con-algunos-huecos-por-tapar-b.jpeg);
+	background: url(../img/carte-au-tresor-by-tonton-copt-license-cc.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: bottom;
+    background-position: center;
     background-size: cover;
 	background-attachment: fixed;
 	text-align: center;
@@ -42,6 +42,14 @@ a{
 	text-decoration: none;
 	color:#000500;
 	transition: all, 1s;
+}
+h1{
+	font-family: "surcouf";
+	text-transform:uppercase;
+	font-size:3em;
+	padding-top: 10px;
+	color:#000;
+	text-shadow: 2px 2px 2px rgba(145, 62, 42, 0.8);
 }
 
 /************************************************************************
@@ -70,16 +78,19 @@ a{
 
 #main-nav a{
 	float:left;
-	margin-top: 80px;
-	font-size:2.75em;
-	font-family:"surcouf";
+	font-size:2em;
+	font-family:"racam";
 	padding:3px 3px 3px 50px;
 	background: url(../img/fish_icone.png) no-repeat;
 	background-position: 5px 12px;
+	margin-right:3%;
 }
 
 #main-nav li{
 	margin-right: 50px;
+	overflow: hidden;
+	float: left;
+	margin-top: 10px;
 }
 
 #main-nav li:last-child{
@@ -100,6 +111,15 @@ a{
 #main .container{
 }
 
+#main aside{
+	background: url(../img/bateau-de-pirate.jpg) no-repeat;
+	background-position: 0px 0px;
+	height:600px;
+	width:600px;
+	float:right;
+	z-index:999;
+}
+
 /*    ----------         Menu 		---------      */
 
 #main-sidebar{
@@ -111,6 +131,8 @@ a{
 /*    ----------         Loop		---------      */
 
 .post{
+	margin-top: 50px;
+	margin-left: 15px;
 }
 
 .title{
