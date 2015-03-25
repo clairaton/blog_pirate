@@ -20,7 +20,7 @@ require_once('inc/config.php');
 	</head>
 	<body>
 		<header id="header">
-			<div class="container">
+			<div class="container-fluid">
 			<h1>Les Pirates du XXeme</h1>
 			<?php include 'nav.php'; ?>
 			</div>

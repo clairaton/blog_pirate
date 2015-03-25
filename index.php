@@ -14,7 +14,7 @@ $posts = $stmt -> fetchAll();
 <?php
 foreach($posts as $post){ ?>
 	<section class="post col-xs-12 col-md-6">
-		<h1 class="title"><?= $post['post_title']?></h1>
+		<h1 class="title"><?= $post['post_title'] ?></h1>
 		<img class="thumb-home" src="" alt="" title="">
 		<div class="resume">
 		<?= Utils::resume($post['post_content'],$post['post_id'],150) ?>
