@@ -62,12 +62,14 @@ h1{
 #header .container-fluid{
 	border-bottom:3px solid #913e2a;
 	margin-bottom:3px;
+	padding:0px;
 }
 
 /*    ----------         Menu 		---------      */
 
 #main-nav{
 	background:rgba(135,101,56,0.7);
+	margin: 0;
 }
 
 #main-nav ul{

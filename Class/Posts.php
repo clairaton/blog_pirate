@@ -18,6 +18,27 @@ class Post{
 	public $_post_content;
 
 	/**
+	 * \brief    Construit l'objet post avec ses setters
+	 *
+	 * \param    $post_id     représente l'id de l'article
+	 * \return   $post_img    représente l'Url de l'image
+	 */
+
+
+	 public function __construct($data = array())    {
+	       // Pour chaque élément du tableau $data
+	    foreach ($data as $key => $value) {
+	           // On défini une variable pour reconstituer le nom d'un setter avec la clé issue du tableau $data
+	        $method = 'set'.ucfirst($key); 
+	        if (method_exists($this, $method)) {
+	               // On appelle le setter et on lui passe la valeur issue du tableau $data
+	               $this->$method($value); 
+	        }
+	    }
+	}
+
+
+	/**
 	 * \brief      Permet d'initialiser les variables privées de l'objet Post
 	 *
 	 * \param      $post_id     représente l'id de l'article
