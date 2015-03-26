@@ -29,12 +29,6 @@ body{
 	font-size: 20px;
 }
 
-.container{
-	width: 1200px;
-	margin:auto;
-	height: 100%;
-}
-
 .btn-back{
 }
 
@@ -60,13 +54,12 @@ h1{
 
 #header{
 	margin: auto;
-	width: 1200px;
 	height: 140px;
 	padding-bottom: 5px;
 	border-bottom: 2px solid ;
 }
 
-#header .container{
+#header .container-fluid{
 	border-bottom:3px solid #913e2a;
 	margin-bottom:3px;
 }
@@ -74,6 +67,12 @@ h1{
 /*    ----------         Menu 		---------      */
 
 #main-nav{
+	background:rgba(135,101,56,0.7);
+}
+
+#main-nav ul{
+	overflow:hidden;
+	display:inline-block;
 }
 
 #main-nav a{
@@ -82,7 +81,7 @@ h1{
 	font-family:"racam";
 	padding:3px 3px 3px 50px;
 	background: url(../img/fish_icone.png) no-repeat;
-	background-position: 5px 12px;
+	background-position: 5px 7px;
 	margin-right:3%;
 }
 
@@ -108,14 +107,10 @@ h1{
 #main{
 }
 
-#main .container{
-}
 
 #main aside{
 	background: url(../img/bateau-de-pirate.jpg) no-repeat;
 	background-position: 0px 0px;
-	height:600px;
-	width:600px;
 	float:right;
 	z-index:999;
 }
