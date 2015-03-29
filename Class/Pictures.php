@@ -41,7 +41,7 @@ class Pictures{
 	}
 
 	/**
-	 * \brief      Permet de récupérer toutes les infos d'un post
+	 * \brief      Permet de récupérer toutes les infos d'une photo
 	 *
 	 * \param      $post_id     représente l'id de l'article
 	 * \return   $post_img    représente l'Url de l'image
@@ -49,8 +49,11 @@ class Pictures{
 
 	public function displayImg($pic_id){
 		$stmt = $db -> query('SELECT * FROM pictures WHERE id_pic = :pic_id');
-		$stmt -> bindValue('pic_id',$pic_id, PDO::PARAM_STR);
+		$stmt -> bindValue('pic_id',$pic_id, PDO::PARAM_INT);
 		$stmt -> execute();
+		$result = $stmt -> fetch();
+
+		return $result;
 	}
 
 	/**
@@ -74,7 +77,7 @@ class Pictures{
 	 * \return     $thumb_url   représente l'Url de l'image
 	 */
 
-	public function ThumbByW($url_pic,$thumb_w=350){
+	public function ThumbByW($url_pic,$thumb_w=300){
 		// on récupère la taille de l'image envoyée
 		$size=getimagesize($url_pic);
 		$w=$size[0]; 
@@ -95,9 +98,9 @@ class Pictures{
 	 * \return     $thumb_url   représente l'Url de l'image
 	 */
 
-	public function createNewFormatImg($url_pic, $thumb_w, $thumb_h, $w, $h){
+	public function createNewFormatImg($url_pic, $new_w, $new_h, $w, $h){
 		// on crée la nouvelle image en couleurs vraies
-		$newBlackPic=imagedreatetruecolor($thumb_w,$thumb_h);
+		$newBlackPic=imagedreatetruecolor($new_w,$new_h);
 		if(!$newBlackPic){
 			throw new Exception ('l\'image true color n\'a pas pu être crée');
 		}

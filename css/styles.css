@@ -23,20 +23,37 @@ body{
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
-	background-attachment: fixed;
 	text-align: center;
-	font-family: "MariageCilou";
+	font-family:"Raleway";
 	font-size: 20px;
+	color:#000;
 }
 
-.btn-back{
+strong{
+	text-transform: uppercase;
+	font-weight: 800;
 }
 
 a{
 	text-decoration: none;
 	color:#000500;
-	transition: all, 1s;
+	font-family:"racam";
+	transition: all, 0.3s;
 }
+
+a:hover,
+a:focus{
+	color: #000;
+	text-shadow: 2px 2px 2px rgba(145, 62, 42, 0.8);
+	text-decoration: none;
+	zoom:110%;
+}
+
+nav a:hover,
+a:focus{
+	zoom:100%;
+}
+
 h1{
 	font-family: "surcouf";
 	text-transform:uppercase;
@@ -44,6 +61,22 @@ h1{
 	padding-top: 10px;
 	color:#000;
 	text-shadow: 2px 2px 2px rgba(145, 62, 42, 0.8);
+}
+h2{
+	font-size:2em;
+}
+
+h2,
+h4{
+	font-family:"racam";
+}
+
+p, h3, h5, h6{
+	font-family:"Raleway";
+}
+
+p{
+	font-size:0.8em;
 }
 
 /************************************************************************
@@ -60,6 +93,7 @@ h1{
 }
 
 #header .container-fluid{
+	background: rgba(200,177,127,0.6);
 	border-bottom:3px solid #913e2a;
 	margin-bottom:3px;
 	padding:0px;
@@ -68,7 +102,6 @@ h1{
 /*    ----------         Menu 		---------      */
 
 #main-nav{
-	background:rgba(135,101,56,0.7);
 	margin: 0;
 }
 
@@ -106,51 +139,136 @@ h1{
 *																		*
 ************************************************************************/
 
-#main{
+#main h1{
+	margin-top: 50px;
+	font-size: 2.5em;
 }
 
 
 #main aside{
 	background: url(../img/bateau-de-pirate.jpg) no-repeat;
-	background-position: 0px 0px;
+	min-height: 600px; 
+	background-position: -100px 0px;
 	float:right;
-	z-index:999;
-}
-
-/*    ----------         Menu 		---------      */
-
-#main-sidebar{
-}
-
-.sidebar{
+	z-index:2;
 }
 
 /*    ----------         Loop		---------      */
 
+section{
+	float:left;
+}
 .post{
 	margin-top: 50px;
-	margin-left: 15px;
+}
+
+.slide{
+	width: 300px;
+	height: 200px;
+	background: rgba(200,177,127,0.8);
+	margin:auto;
+	position: absolute;
+	top: 0;
+	left:50%;
+	margin-left: -150px;
+	display:none;
+}
+
+.large{
+	padding-top: 15px;
+	width:600px;
+	margin-left: -300px;
 }
 
 .title{
 }
 
 .thumb-home{
-}
-
-.resume{
+	border: 1px solid #c8b17f;
+	box-shadow: 2px 2px 5px 1px rgba(145, 62, 42, 0.8);
 }
 
 .date{
+	float:left;
 }
 
 .author{
+	float:right;
+}
+
+/*    ----------       Article 		---------      */
+
+.single{
+	margin: 50px 10%;
+	width:80%;
+	padding:20px;
+	background: #fff5e0;
+	border-width: 80px;
+	border-image: url('../img/skull-mini.png');
+	box-shadow: 0px 0px 2px 18px rgba(200,177,127,0.6);
+	text-align: left;
+}
+
+.single h2{
+	text-align:center;
+	padding-bottom: 25px;
 }
 
 .content{
+	clear:both;
+	margin-top: 80px;
+}
+
+.pic-single{
+	float:left;
+	margin: 0 20px 20px 0;
+	max-width: 100%;
+}
+
+.btn-back{
+	text-transform: uppercase;
+	font-size: 1.5em;
+}
+
+.single p{
+	text-align:justify;
 }
 
 
+/*    ----------      Programme		---------      */
+
+.prog img{
+	float:left;
+	margin: 0 20px 20px 0;
+	max-width: 100%;
+}
+
+
+
+/*    ----------      category		---------      */
+
+.cat{
+	margin: 50px 1%;
+	width:65%;
+	padding:0;
+}
+
+.annexe{
+	float: left;
+	width:100%;
+	height:auto;
+	background: none;
+	position:static;
+	margin-left: 0;
+	display:block;
+	padding:0;
+}
+
+.cat .thumb-home{
+	float: left;
+	max-width: 50%;
+	margin-right: 10px;
+}
 
 
 /************************************************************************

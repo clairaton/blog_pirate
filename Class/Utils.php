@@ -22,11 +22,11 @@ class Utils{
 	 * \return    Une chaine de texte coupée avec un élément montrant que c'est un extrait. Par défaut on accolle [...] + un lien Lire la suite
 	 */
 
-	public static function resume($content, $id, $cut = 150){
+	public static function resume($content, $id, $cut = 100){
 		if(strlen($content)>$cut){
 			$resume=wordwrap($content,$cut,'|',true);
 			$array=explode('|',$resume);
-			$resume=$array[0].'[...] <a href="single.php?id='.$id.'">Lire la suite</a> ';
+			$resume='<p>'.$array[0].'[...] </p>';
 		}
 		else{
 			$resume=$content;	

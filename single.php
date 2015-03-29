@@ -1,26 +1,22 @@
 <?php
 include 'header.php';
-// on récupère l'id de l'article
-if(!empty($_GET) && !empty($_GET['id'])){
-	$id=$_GET['id'];
-}
 
-// on crée une requête pour récupérer l'article
-$stmt = $db -> prepare('SELECT * FROM post WHERE post_id= :id') ;
-$stmt -> bindValue('id',$id,PDO::PARAM_STR);
-$stmt -> execute();
-$post = $stmt -> fetchAll();
+// on crée une requête pour récupérer la photo
+$stmt=$db->prepare('SELECT * FROM pictures WHERE id_pic = :id_pic');
+$stmt-> bindValue('id_pic', $post['post_id'], PDO::PARAM_INT);
+$stmt-> execute();
+$pic = $stmt-> fetch();
 
-if(empty($post)){
+if(!empty($post)){
 ?>
-	<section>
-		<h1 class="title"><?= $post['post_title']?></h1>
-		<img class="thumb-home" src="" alt="" title="">
+	<section class="single col-xs-12">
+		<h2 class="title"><?= $post['post_title']?></h2>
+		<h3 class="date"><?= date('j M. Y',strtotime($post['post_date']))?></h3>
+		<h4 class="author"><p>Par </p><?= $post['post_author']?></h4>
 		<div class="content">
-		<?= $post['post_content']?>
+		<img class="pic-single" src="<?= !empty($pic['medium_url'])?$pic['medium_url']:$pic['thumb_url'] ?>" alt="<?= $pic['pic_name'] ?>">
+			<p><?= nl2br($post['post_content'])?></p>
 		</div>
-		<h2 class="date"><?= $post['post_date']?></h2>
-		<h3 class="author"><?= $post['post_author']?></h3>
 	</section>
 	<?php
 }

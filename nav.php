@@ -1,12 +1,12 @@
 <?php
 $menu=array(
 	'index.php' => 'Acceuil',
-	'contact.php' => 'Contact',
-	'planning.php' => 'Programme',
+	'category.php' => 'News',
+	'program.php' => 'Programme',
 	'pics.php' => 'Photos'
 );
 ?>
-<nav id="main-nav">
+<nav id="main-nav" class="hidden-xs col-sm-12">
 	<ul>
 	<?php
 		foreach($menu as $key => $value){ ?>
