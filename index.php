@@ -15,10 +15,10 @@ $douarnenez = $stmt -> fetch();
 ?>
 	<aside class="hidden-xs col-md-4">		
 	</aside>
-	<h1 class="col-xs-8">Dernières News</h1>
+	<h1 class="col-xs-12 col-sm-8">Dernières News</h1>
 <?php
 foreach($posts as $post){ ?>
-	<section class="post col-xs-8 col-md-4" >
+	<section class="post col-xs-12 col-sm-8 col-md-4" >
 		<a href="single.php?id=<?= $post['post_id'] ?>">
 		<?php
 			$stmt=$db->prepare('SELECT * FROM pictures WHERE id_pic = :id_pic');
@@ -42,7 +42,7 @@ foreach($posts as $post){ ?>
 		</a>
 	</section>
 	<?php } ?>
-	<div class="post col-xs-8 col-md-8" >
+	<div class="post col-xs-12 col-sm-8" >
 		<a href="single.php?id=<?= $douarnenez['post_id'] ?>">
 		<?php
 			$stmt=$db->prepare('SELECT * FROM pictures WHERE id_pic = :id_pic');
