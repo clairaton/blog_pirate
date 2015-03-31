@@ -8,7 +8,7 @@ $stmt = $db -> query('SELECT * FROM post ORDER BY post_id DESC');
 $posts = $stmt -> fetchAll();
 
 ?>
-	<aside class="hidden-xs col-md-3">		
+	<aside class="cat hidden-xs col-md-3">		
 	</aside>
 <?php
 foreach($posts as $post){ ?>
