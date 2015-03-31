@@ -186,6 +186,7 @@ section{
 .thumb-home{
 	border: 1px solid #c8b17f;
 	box-shadow: 2px 2px 5px 1px rgba(145, 62, 42, 0.8);
+	max-width: 100%;
 }
 
 .date{
