@@ -46,13 +46,8 @@ a:focus{
 	color: #000;
 	text-shadow: 2px 2px 2px rgba(145, 62, 42, 0.8);
 	text-decoration: none;
-	zoom:110%;
 }
 
-nav a:hover,
-a:focus{
-	zoom:100%;
-}
 
 h1{
 	font-family: "surcouf";
@@ -79,6 +74,11 @@ p{
 	font-size:0.8em;
 }
 
+hr{
+	border-top: 1px solid #000;
+	box-shadow: 2px 2px 2px rgba(145, 62, 42, 0.8);
+}
+
 /************************************************************************
 *																		*
 * 									Header								*
@@ -100,6 +100,11 @@ p{
 }
 
 /*    ----------         Menu 		---------      */
+
+#main{
+	max-width: 1230px;
+	margin:auto;
+}
 
 #main-nav{
 	margin: 0;
@@ -145,9 +150,9 @@ p{
 }
 
 
-#main aside{
+.boat{
 	background: url(../img/bateau-de-pirate.jpg) no-repeat;
-	min-height: 600px; 
+	min-height: 600px;
 	background-position: -100px 0px;
 	float:right;
 	z-index:2;
@@ -160,6 +165,16 @@ section{
 }
 .post{
 	margin-top: 50px;
+}
+
+.post h4{
+	text-transform: uppercase;
+}
+
+a.btn-back:hover,
+a.btn-back:focus
+{
+	zoom:110%;
 }
 
 .slide{
@@ -180,13 +195,10 @@ section{
 	margin-left: -300px;
 }
 
-.title{
-}
-
 .thumb-home{
 	border: 1px solid #c8b17f;
 	box-shadow: 2px 2px 5px 1px rgba(145, 62, 42, 0.8);
-	max-width: 100%;
+	max-width:100%;
 }
 
 .date{
@@ -236,16 +248,6 @@ section{
 }
 
 
-/*    ----------      Programme		---------      */
-
-.prog img{
-	float:left;
-	margin: 0 20px 20px 0;
-	max-width: 100%;
-}
-
-
-
 /*    ----------      category		---------      */
 
 .cat{
@@ -269,6 +271,82 @@ section{
 	float: left;
 	max-width: 50%;
 	margin-right: 10px;
+}
+
+
+/*    ----------      Sidebar		---------      */
+
+.sidebar{
+	background: rgba(200,177,127,0.6);
+	float:right;
+	margin-top:50px;
+	padding-bottom: 50px;
+}
+
+.sidebar nav{
+	text-align: left;
+}
+
+.sidebar a{
+	font-family: "Raleway";
+	background: url(../img/fish-li.png) no-repeat;
+	background-position: 0px 8px;
+	padding-left: 60px;
+	margin-left: 30px;
+	font-size: 1.25em;
+	line-height: 40px;
+}
+
+#main .sidebar h1{
+	font-size:2em;
+}
+
+/*    ----------      Programme		---------      */
+
+
+#planning{
+	margin-top: 50px;
+	padding:20px;
+	background: #fff5e0;
+	border-width: 80px;
+	border-image: url('../img/skull-mini.png');
+	box-shadow: 0px 0px 2px 18px rgba(200,177,127,0.6);
+	text-align: left;
+}
+
+.hook{
+	background: url(../img/crochet.png) no-repeat;
+	min-height: 600px;
+	background-position: 0px 0px;
+	float:right;
+	z-index:2;
+}
+
+.prog h2{
+	font-family:"surcouf";
+	margin-top:70px;
+	text-shadow: 2px 2px 2px rgba(145, 62, 42, 0.8);
+	font-size: 3em;
+}
+
+.prog h3{
+	font-family:"racam";
+	margin-top:35px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+.prog h3:first-child,
+.prog ul:nth-child(2){
+	margin-top:0px;
+}
+
+.prog ul{
+	margin-top:35px;
+}
+
+.prog li{
+	font-size:1em;
 }
 
 
