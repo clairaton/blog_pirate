@@ -13,18 +13,19 @@ $stmt = $db -> query('SELECT * FROM post WHERE post_id = 1');
 $douarnenez = $stmt -> fetch();
 
 ?>
-	<aside class="hidden-xs col-md-4">		
+	<aside class="boat hidden-xs hidden-sm col-md-4">
 	</aside>
-	<h1 class="col-xs-12 col-sm-8">Dernières News</h1>
+	<h1 class="col-xs-12 col-md-8">Dernières News</h1>
 <?php
+// Boucle permettant d'afficher les deux derniers posts créés
 foreach($posts as $post){ ?>
-	<section class="post col-xs-12 col-sm-8 col-md-4" >
+	<section class="post col-xs-12 col-sm-6 col-md-4" >
 		<a href="single.php?id=<?= $post['post_id'] ?>">
 		<?php
 			$stmt=$db->prepare('SELECT * FROM pictures WHERE id_pic = :id_pic');
 			$stmt-> bindValue('id_pic', $post['post_pic_id'], PDO::PARAM_INT);
 			$stmt-> execute();
-			$result = $stmt-> fetch(); 
+			$result = $stmt-> fetch();
 		?>
 			<img class="thumb-home" src="<?= $result['thumb_url'] ?>" alt="<?= $result['pic_name'] ?>" />
 			<div class="slide col-xs-12">
@@ -42,13 +43,13 @@ foreach($posts as $post){ ?>
 		</a>
 	</section>
 	<?php } ?>
-	<div class="post col-xs-12 col-sm-8" >
+	<div class="post col-xs-12 col-md-8" >
 		<a href="single.php?id=<?= $douarnenez['post_id'] ?>">
 		<?php
 			$stmt=$db->prepare('SELECT * FROM pictures WHERE id_pic = :id_pic');
 			$stmt-> bindValue('id_pic', $douarnenez['post_pic_id'], PDO::PARAM_INT);
 			$stmt-> execute();
-			$result = $stmt-> fetch(); 
+			$result = $stmt-> fetch();
 		?>
 			<img class="thumb-home" src="<?= $result['medium_url'] ?>" alt="<?= $result['pic_name'] ?>" />
 			<div class="slide large col-xs-12">
