@@ -3,7 +3,7 @@ include 'header.php';
 
 // on crée une requête pour récupérer la photo
 $stmt=$db->prepare('SELECT * FROM pictures WHERE id_pic = :id_pic');
-$stmt-> bindValue('id_pic', $post['post_id'], PDO::PARAM_INT);
+$stmt-> bindValue('id_pic', $post['post_pic_id'] , PDO::PARAM_INT);
 $stmt-> execute();
 $pic = $stmt-> fetch();
 
@@ -14,7 +14,7 @@ if(!empty($post)){
 		<h3 class="date"><?= date('j M. Y',strtotime($post['post_date']))?></h3>
 		<h4 class="author"><p>Par </p><?= $post['post_author']?></h4>
 		<div class="content">
-		<img class="pic-single" src="<?= !empty($pic['medium_url'])?$pic['medium_url']:$pic['thumb_url'] ?>" alt="<?= $pic['pic_name'] ?>">
+		<img class="pic-single" src="<?= $pic['thumb_url'] ?>" alt="<?= $pic['pic_name'] ?>">
 			<p><?= nl2br($post['post_content'])?></p>
 		</div>
 	</section>
