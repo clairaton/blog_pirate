@@ -7,7 +7,7 @@ $menu=array(
 	'pics.php' => 'Photos'
 );
 ?>
-<aside id="admin-sidebar">
+<aside id="admin-sidebar" class="hidden-xs col-sm-3">
 	<ul>
 	<?php
 		foreach($menu as $key => $value){

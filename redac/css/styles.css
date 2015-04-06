@@ -46,11 +46,10 @@ body{
 }
 
 #admin-sidebar{
-	width:400px;
 	background: #4d4f4e;
+	min-height: 530px;
 	height:100%;
 	float: left;
-	margin-right: 20px;
 }
 
 .active{
@@ -62,6 +61,46 @@ li{
 	height:50px;
 	padding:;
 }
+
+/*    ----------         Login  		---------      */
+
+.login{
+	max-width: 350px;
+}
+
+.login .form-signin input[type=email],
+.login .form-signin input[type=password]{
+	margin-top: 20px;
+}
+
+.login .form-signin-heading{
+	text-align: center;
+}
+
+.login .form-signin .btn-block{
+	width: 50%;
+ 	margin: auto;
+}
+
+/*    ----------         New User 		---------      */
+
+#register .label{
+	display: block;
+  	text-align: left;
+	text-transform: uppercase;
+	color: #000;
+}
+
+#register .form-group{
+	padding-left:10%;
+}
+
+#register input{
+	width: 90%;
+	max-width: 300px;
+}
+
+
 
 
 /************************************************************************

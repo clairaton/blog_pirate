@@ -1,3 +1,4 @@
+				</div>
 			</div>
 		</main>
 		<footer id="footer">

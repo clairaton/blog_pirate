@@ -1,4 +1,4 @@
-<?php include 'header.php'
+<?php include 'header.php';
 
 // on définit les champs du formulaire dans un tableau
 $fields=array(
@@ -110,11 +110,11 @@ if(!empty($_POST)){
 ?>
 
 
-	<div class="row">
-		<div class="col-xs-12 col-sm-9">
+		<div class="col-xs-12 col-sm-9" id="register">
+			<h2>Nouvel Utilisateur</h2>
 			<?php
 			if(!$thanks){?>
-			<form class="form-horizontal" action="register.php" method="POST" novalidate>
+			<form class="form-horizontal" action="new_user.php" method="POST" novalidate>
 			<?php
 			//on crée une boucle d'affichage des champs du formulaire
 			foreach($fields as $key => $array){ ?>
@@ -134,5 +134,4 @@ if(!empty($_POST)){
 			<?php }
 			echo $thanks?"<h2>Merci $user_firstname</h2>":'' ?>
 		</div>
-	</div>
-<?php include 'footer.php'
+<?php include 'footer.php';

@@ -11,11 +11,11 @@
  */
 
 class Post{
-	public $_post_id;
-	public $_post_title;
-	public $_post_author;
-	public $_post_pic_id;
-	public $_post_content;
+	private $_post_id;
+	private $_post_title;
+	private $_post_author;
+	private $_post_pic_id;
+	private $_post_content;
 
 	/**
 	 * \brief    Construit l'objet post avec ses setters
@@ -39,7 +39,7 @@ class Post{
 
 
 	/**
-	 * \brief      Permet d'initialiser les variables privées de l'objet Post
+	 * \brief      Permet d'initialiser les variables privées post_id de l'objet Post
 	 *
 	 * \param      $post_id     représente l'id de l'article
 	 *
@@ -50,7 +50,7 @@ class Post{
     }
 
     	/**
-	 * \brief      Permet d'initialiser les variables privées de l'objet Post
+	 * \brief      Permet d'initialiser les variables privées post_title de l'objet Post
 	 *
 	 * \param      $post_title     représente le titre de l'article
 	 *
@@ -61,7 +61,7 @@ class Post{
 	}
 
 		/**
-	 * \brief      Permet d'initialiser les variables privées de l'objet Post
+	 * \brief      Permet d'initialiser la variable post_author privées de l'objet Post
 	 *
 	 * \param      $post_author     représente l'auteur de l'article
 	 *
@@ -72,7 +72,7 @@ class Post{
 	}
 
 		/**
-	 * \brief      Permet d'initialiser les variables privées de l'objet Post
+	 * \brief      Permet d'initialiser à la variable privée post_pic_id de l'objet Post
 	 *
 	 * \param      $post_pic_id     représente l'id de la photo de l'article
 	 *
@@ -83,7 +83,7 @@ class Post{
 	}
 
 		/**
-	 * \brief      Permet d'initialiser les variables privées de l'objet Post
+	 * \brief      Permet d'initialiser à la variable privée post_content de l'objet Post
 	 *
 	 * \param      $post_content     représente le contenu de l'article
 	 *
@@ -96,7 +96,7 @@ class Post{
 
 
 	/**
-	 * \brief      Permet d'accèder variables privées de l'objet Post
+	 * \brief      Permet d'accèder variables privées post_id de l'objet Post
 	 *
 	 * \return      $post_id     représente l'id de l'article
 	 *
@@ -107,7 +107,7 @@ class Post{
 	}
 
 	/**
-	 * \brief      Permet d'accèder variables privées de l'objet Post
+	 * \brief      Permet d'accèder variables privées post_title de l'objet Post
 	 *
 	 * \return      $post_title     représente le titre de l'article
 	 *
@@ -118,7 +118,7 @@ class Post{
 	}
 
 	/**
-	 * \brief      Permet d'accèder variables privées de l'objet Post
+	 * \brief      Permet d'accèder à la variable privée post_author de l'objet Post
 	 *
 	 * \return      $post_author     représente l'auteur' de l'article
 	 *
@@ -129,7 +129,7 @@ class Post{
 	}
 
 	/**
-	 * \brief      Permet d'accèder variables privées de l'objet Post
+	 * \brief      Permet d'accèder à la variable privée post_pic_id de l'objet Post
 	 *
 	 * \return      $post_pic_id     représente l'id de l'image de l'article
 	 *
@@ -140,14 +140,14 @@ class Post{
 	}
 
 	/**
-	 * \brief      Permet d'accèder variables privées de l'objet Post
+	 * \brief      Permet d'accèder à la variable privée post_content de l'objet Post
 	 *
 	 * \return      $post_content     représente le contenu de l'article
 	 *
 	 */
 
 	public function getPost_content(){
-		return $this->_post_content;
+		return nl2br($this->_post_content);
 	}
 
 }

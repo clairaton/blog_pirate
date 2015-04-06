@@ -349,7 +349,8 @@ a.btn-back:focus
 	z-index:2;
 }
 
-.prog h2{
+.prog h2,
+.portfolio{
 	font-family:"surcouf";
 	margin-top:70px;
 	text-shadow: 2px 2px 2px rgba(145, 62, 42, 0.8);
@@ -375,6 +376,65 @@ a.btn-back:focus
 .prog li{
 	font-size:1em;
 }
+
+/*    ----------      Photo		---------      */
+
+#gallery{
+	margin-top: 15px;
+	display:flex;
+	flex-wrap: wrap;
+	justify-content:space-around;
+	align-items:center;
+	width:100%;
+}
+
+#gallery img{
+	width:400px;
+	height:auto;
+	margin:15px;
+}
+
+#gallery img:hover,
+#gallery img:focus{
+	cursor :pointer;
+}
+
+.pic{
+	float:left;
+	position:relative;
+}
+
+#big-pic img{
+	  width: 100%;
+}
+
+.info{
+	display: none;
+	padding: 10px;
+	border-radius: 5px;
+	background: rgba(0,0,0,0.7);
+	font-family: "mariageCilou";
+	text-transform: uppercase;
+	color: #D6d5d2;
+	width: 120px;
+	font-size: 0.8em;
+	z-index: 5;
+	position: absolute;
+	top: 20px;
+	right : 20px;
+}
+
+#closer{
+	width:25px;
+	height:25px;
+	position:relative;
+	background: url(../img/closer.png) no-repeat;
+	top: 18px;
+  	left: 100%;
+  	margin-left: -12px;
+	z-index:7;
+}
+
 
 
 /************************************************************************

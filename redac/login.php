@@ -1,5 +1,5 @@
 <?php
-include_once 'header.php';
+include 'header.php';
 
 if (!empty($_POST)) {
 
@@ -8,7 +8,7 @@ if (!empty($_POST)) {
 
 	if (!empty($login) && !empty($pass)) {
 
-		$query = $db->prepare('SELECT * FROM user WHERE user_email = :login AND user_status = 2');
+		$query = $db->prepare('SELECT * FROM user WHERE user_email = :login');
 		$query->bindValue('login', $login, PDO::PARAM_STR);
 		$query->execute();
 		$user = $query->fetch();
@@ -20,7 +20,6 @@ if (!empty($_POST)) {
 				$_SESSION['user_id'] = $user['user_id'];
 				$_SESSION['lastname'] = $user['user_lastname'];
 				$_SESSION['firstname'] = $user['user_firstname'];
-				$_SESSION['status'] = $user['user_status'];
 
 				header('Location: index.php');
 				exit();

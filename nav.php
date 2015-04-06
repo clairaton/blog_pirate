@@ -3,7 +3,7 @@ $menu=array(
 	'index.php' => 'Acceuil',
 	'category.php' => 'News',
 	'program.php' => 'Programme',
-	'pics.php' => 'Photos'
+	'pictures.php' => 'Photos'
 );
 ?>
 <nav id="main-nav" class="hidden-xs col-sm-12">

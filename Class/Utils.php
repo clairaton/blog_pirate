@@ -14,7 +14,7 @@ class Utils{
 
 	/**
 	 * \brief      Coupe un extrait d'article
-	 * \details    ON vérifiera tout d'abord que la chaîne de texte initiale est bien supérieure à la coupe. La fonction coupera le texte au mot qui précède immédiatement la limit et y accolle un élément pour montrer que le texte renvoyé est un extrait.
+	 * \details    On vérifiera tout d'abord que la chaîne de texte initiale est bien supérieure à la coupe. La fonction coupera le texte au mot qui précède immédiatement la limit et y accolle un élément pour montrer que le texte renvoyé est un extrait.
 	 *                  des coordonnées des points. (cf #Point)
 	 * \param    $content     représente le contenu à couper.
 	 * \param    $cut      représente la taille de l'extrait (... et lire la suite exclut).
@@ -33,6 +33,25 @@ class Utils{
 		}
 		return $resume;
 	}
+
+	/**
+	 * \brief      Transforme une chaîne de type variable séparée par des underscores en camelCase utilasable pour une fonction
+	 * \details    On remplace des underscores par des espaces on transforme les mots en mettant la première lettre de chacun en lettre capitale
+	 * \param      $str     représente la chaine à transformer.
+	 * \return     Une chaine de texte en CamelCase
+	 */
+
+	public static function camelCase($str){
+		$str=str_replace('_',' ',$str);
+		$str=ucwords($str);
+		$str=str_replace(' ','',$str);
+
+		return $str;
+	}
+
+
+
+
 }
 
 

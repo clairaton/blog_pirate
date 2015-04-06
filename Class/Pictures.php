@@ -1,4 +1,4 @@
-<?
+<?php
 
 /**
  * \file      Pictures.php
@@ -11,13 +11,13 @@
  */
 
 class Pictures{
-	public $_id_pic;
-	public $_original_url;
-	public $_thumb_url;
-	public $_medium_url;
-	public $_pic_name;
-	public $_pic_author;
-	public $_pic_date;
+	private $_id_pic;
+	private $_original_url;
+	private $_thumb_url;
+	private $_medium_url;
+	private $_pic_name;
+	private $_pic_author;
+	private $_pic_date;
 
 
 	/**
@@ -57,16 +57,40 @@ class Pictures{
 	}
 
 	/**
-	 * \brief      Permet d'enregistrer l'image uploader lors de la création d'un article
+	 * \brief      Permet d'enregistrer l'image uploadée lors de la création d'un article
 	 *
 	 * \param      $pic_id      représente l'id de l'article
 	 * \return     $thumb_url   représente l'Url de l'image
 	 */
 
-	public function uploadImg($pic_id){
+	public function uploadImg($pic_id=NULL){
 		// on s'assure que la photo est bien enregistrée en minuscule sans espace
 
-		// on l'enregistre dans le repertoire uploads
+		// si nous avons bien récupéré une image
+		if (!empty($_FILES['news_pic'])){
+			// si il n'y a pas d'erreurs de chargement
+			if ($_FILES['news_pic']['error'] <= 0){
+				// si la taille du fichier est inférieur à 2Mo
+				if ($_FILES['news_pic']['size'] <= 2097152){
+					// on récupére le nom de l'image chargée dans une variable
+					$news_pic = $_FILES['news_pic']['name'];
+					// on crée un array dans lequel figurent seulement les extensions acceptées, avec le type MIME qui leur est associé
+					$extensionList = array('jpg' => 'image/jpeg', 'jpeg' => 'image/jpeg');
+					$extensionListIE = array('jpg' => 'image/pjpg', 'jpeg'=>'image/pjpeg'); // Exception IE pour le jpeg
+					// on vérifie l'extension du fichier :
+					$presumExtension = explode('.', $news_pic);
+					$presumExtension = strtolower($presumExtension[count($presumExtension)-1]);
+					if ($presumExtension == 'jpg' || $presumExtension == 'jpeg' || $presumExtension == 'pjpg' || $presumExtension == 'pjpeg' || $presumExtension == 'gif' || $presumExtension == 'png'){
+						$news_pic = getimagesize($_FILES['news_pic']['tmp_name']);
+						if($news_pic['mime'] == $ExtensionList[$presumExtension]  || $news_pic['mime'] == $extensionListIE[$presumExtension]){
+							$choosenPic = imagecreatefromjpeg($_FILES['news_pic']['tmp_name']);
+							//on enregistre l'image
+							imagejpeg($choosenPic , 'uploads/'.$NomImageExploitable.'.'.$ExtensionPresumee, 100);
+						}
+					}
+				}
+			}
+		}
 	}
 
 	/**
@@ -100,7 +124,7 @@ class Pictures{
 
 	public function createNewFormatImg($url_pic, $new_w, $new_h, $w, $h){
 		// on crée la nouvelle image en couleurs vraies
-		$newBlackPic=imagedreatetruecolor($new_w,$new_h);
+		$newBlackPic=imagecreatetruecolor($new_w,$new_h);
 		if(!$newBlackPic){
 			throw new Exception ('l\'image true color n\'a pas pu être crée');
 		}

@@ -79,7 +79,7 @@ $nb_pages = ceil($nb_items / $nb_posts_per_page);
 include 'sidebar.php';
 
 if($result){
-	echo '<h2 class="result">Il y a articles '.$nb_items.' liés à la sélection </h2>' ;
+	echo '<h2 class="result">Il y a '.$nb_items.' articles liés à la sélection </h2>' ;
 }
 
 foreach($posts as $post){ ?>
